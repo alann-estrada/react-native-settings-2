@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
   s.description  = <<-DESC
                   Access iOS and Android device settings from React Native
                    DESC
-  s.homepage     = "https://github.com/alann-estrada/react-native-settings-2s"
+  s.homepage     = "https://github.com/alann-estrada/react-native-settings-2"
   s.license      = "MIT"
   # s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
   s.author             = { "author" => "erezrokah@gmail.com" }
