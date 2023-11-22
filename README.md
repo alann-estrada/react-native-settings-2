@@ -4,6 +4,8 @@ We created this module to allow us to query for specific device settings.
 For example we wanted to know if the GPS is on/off without using 'react-native'
 'geolocation' since using it will trigger a permission pop up.
 
+"It is important to add that this is a copy of the original project, since the original has some bugs to correct, THE CREDITS WILL ALWAYS GO TO THE ORIGINAL AUTHOR. The purpose of the copy is to allow accepting new functions or corrections to new bugs that can be present and try to keep it updated as best as possible. Any questions or suggestions will be well received" -Alann Estrada
+
 We wanted to make the distinction between the two:
 
 1. Permission is not allowed for our application.

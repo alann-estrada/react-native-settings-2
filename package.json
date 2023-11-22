@@ -1,16 +1,17 @@
 {
-  "name": "react-native-settings",
+  "name": "react-native-settings-2",
   "version": "1.0.0",
   "description": "Access iOS and Android device settings from React Native",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git@github.com:rmrs/react-native-settings.git"
+    "url": "git@github.com:alann-estrada/react-native-settings-2.git"
   },
   "keywords": [
     "react-native",
     "react-native-settings",
-    "settings"
+    "settings",
+    "settings-2",
   ],
   "author": "Erez Rokah <erezrokah@gmail.com>",
   "license": "MIT",
@@ -20,7 +21,7 @@
   "bugs": {
     "url": "https://github.com/rmrs/react-native-settings/issues"
   },
-  "homepage": "https://github.com/rmrs/react-native-settings#readme",
+  "homepage": "https://github.com/alann-estrada/react-native-settings-2#readme",
   "devDependencies": {
     "@commitlint/cli": "^17.2.0",
     "@commitlint/config-conventional": "^17.2.0",
