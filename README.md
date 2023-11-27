@@ -1,10 +1,10 @@
-# react-native-settings
+# react-native-settings-2
 
 We created this module to allow us to query for specific device settings.
 For example we wanted to know if the GPS is on/off without using 'react-native'
 'geolocation' since using it will trigger a permission pop up.
 
-"It is important to add that this is a copy of the original project, since the original has some bugs to correct, THE CREDITS WILL ALWAYS GO TO THE ORIGINAL AUTHOR. The purpose of the copy is to allow accepting new functions or corrections to new bugs that can be present and try to keep it updated as best as possible. Any questions or suggestions will be well received" -Alann Estrada
+"It is important to add that this is a copy of the original project, since the original has some bugs to correct, THE CREDITS WILL ALWAYS GO TO THE ORIGINAL AUTHOR. The purpose of the copy is to allow accepting new functions or corrections to new bugs that can be present and try to keep it updated as best as possible. Any questions or suggestions will be well received" -[@alann-estrada](https://github.com/alann-estrada/)
 
 We wanted to make the distinction between the two:
 
@@ -18,15 +18,15 @@ a setting or denies/grants a permission.
 Currently we've only added a way to extract the 'location' setting (and airplane mode on Android).
 We will add more in the future based on requirements.
 
-[`react-native example`](https://github.com/rmrs/react-native-settings/tree/master/example) for both Android and iOS.
+[`react-native example`](https://github.com/alann-estrada/react-native-settings-2/tree/main/example) for both Android and iOS.
 
 ## Getting started
 
-`$ npm install react-native-settings --save`
+`$ npm install react-native-settings-2 --save`
 
-### Mostly automatic installation
+### Mostly automatic installation (Not required as of React Native v0.60)
 
-`$ react-native link react-native-settings`
+`$ react-native link react-native-settings-2`
 
 #### Android
 
@@ -62,7 +62,7 @@ public class MainApplication extends Application implements ReactApplication {
 #### iOS
 
 1. In XCode, in the project navigator, right click `Libraries` ➜ `Add Files to [your project's name]`
-2. Go to `node_modules` ➜ `react-native-settings` and add `RNSettings.xcodeproj`
+2. Go to `node_modules` ➜ `react-native-settings-2` and add `RNSettings.xcodeproj`
 3. In XCode, in the project navigator, select your project. Add `libRNSettings.a` to your project's `Build Phases` ➜ `Link Binary With Libraries`
 4. Run your project (`Cmd+R`)<
 
@@ -76,14 +76,14 @@ public class MainApplication extends Application implements ReactApplication {
 2. Append the following lines to `android/settings.gradle`:
 
 ```java
-include ':react-native-settings'
-project(':react-native-settings').projectDir = new File(rootProject.projectDir, 	'../node_modules/react-native-settings/android')
+include ':react-native-settings-2'
+project(':react-native-settings-2').projectDir = new File(rootProject.projectDir, 	'../node_modules/react-native-settings-2/android')
 ```
 
 3. Insert the following lines inside the dependencies block in `android/app/build.gradle`:
 
 ```java
-  implementation project(':react-native-settings')
+  implementation project(':react-native-settings-2')
 ```
 
 ## Usage
@@ -93,7 +93,7 @@ project(':react-native-settings').projectDir = new File(rootProject.projectDir, 
 #### Getting a setting
 
 ```javascript
-import RNSettings from 'react-native-settings';
+import RNSettings from 'react-native-settings-2';
 
 RNSettings.getSetting(RNSettings.LOCATION_SETTING).then(result => {
   if (result == RNSettings.ENABLED) {
@@ -107,7 +107,7 @@ RNSettings.getSetting(RNSettings.LOCATION_SETTING).then(result => {
 #### Android only
 
 ```javascript
-import RNSettings from 'react-native-settings';
+import RNSettings from 'react-native-settings-2';
 
 RNSettings.getSetting(RNSettings.AIRPLANE_MODE_SETTING).then(result => {
   if (result == RNSettings.ENABLED) {
@@ -129,7 +129,7 @@ RNSettings.getSetting(RNSettings.CAPTIONING_SETTINGS).then(result => {
 ##### Open settings application in a specific setting
 
 ```javascript
-import RNSettings from 'react-native-settings';
+import RNSettings from 'react-native-settings-2';
 
 RNSettings.openSetting(RNSettings.ACTION_LOCATION_SOURCE_SETTINGS).then(
   result => {
@@ -157,7 +157,7 @@ RNSettings.openSetting(RNSettings.ACTION_CAPTIONING_SETTINGS).then(result => {
 ##### Listen to setting change event (when applicable)
 
 ```javascript
-import RNSettings from 'react-native-settings';
+import RNSettings from 'react-native-settings-2';
 import { DeviceEventEmitter } from 'react-native';
 
 _handleGPSProviderEvent = e => {
